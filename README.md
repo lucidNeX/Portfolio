@@ -2,6 +2,8 @@
 
 portfolio
 
-* npm install
-* npm build
-* npm run serve
+- npm install
+- npm build
+- npm run serve
+
+- done
