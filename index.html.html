@@ -1,0 +1,822 @@
+
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reminder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=3Cp6z2YqVF-EHW0m2fvGKfa4rMIX11JvmAYiwK2zRWsV2hrlY7uJAWn-2V4omR3-mYA5kS-xxC3UaGrugRCVXlCKp6zRsPfvQMCHomiRNrYpmDJHsRL-f0Kwuqtsg8PxzFeG-v_oPsldbHCAzvZjOqhKApfES5o2R2yBXSkOrCPD_ZNpdSUpz3lcXwXTnT7ZP8ijYEjzpT-PmlXgFBScsPRpJyadI_sJM1lEmZ4IIh_JBMBE01AvNRPOdX4L5MOtuaFEW--74Pam73y0AFOxaxiHV3UcfsQDc72pw0BkXdu8F3unoQSeHKrE2Lx4bFnjP-GrTGZLM8aEd-NwCiQi4agiyWXiUosKVJPOXs9HGLiHJpjon08eUxFpkERsw3K1G1mGrKsZCZgEYoQS_6kUk44gjaGMB9Z9ad36Gdm4ptq3x7XYdX3kk1vuMCPyvCtabKOdvFDzmOrWAR7vNoTeB8YO16S4bH_2TL2WDK9KuI5JODG6HB7gIfDEz9HxPp7ZP7OFmYUMHQgzOPs2XVEYWaAQhQgUtw34sfGMZm38sIV24GZYhsWoVCwSuvpX7Ti1_mzOGj6eNmXLDK1SX3JsJIQ7cH-1bBktQQ45XORMF7vJOgPWXSbTEbx7tkNc5cCuYm8_gJRoDHOmfcAMc4qMQT4vd3L5iOWNYF8u8NCd3k96xSa8AZLk-G-hkwn_17nhFeau_b3i11SCoOu4UXCr93tUhBHOONnP5sgWNY2sC5BAJfrq3EQ2Ib5dEopnY3SeiCDIqZPxG6aV8Bytj34Azfxe-Z5pRvdIUyvm9b0q6x94G8fZgdC1Q6sXP_SsYfo2R4wGNtuC5aiKLD0Tw4Ei9g0oeY0uGKYRKvYtIZQGCe_NgbDtZ7onTU06RtXJKCDHmdaBi_JtOhkQMBHSY1EUR_f8akUJXuHs2t0ztY_1E47_o7SBoNpk3mMmU2uMFkASUCMKEZjn4_GtE6FGrblYVOwKpRcpWEyyrF8H7smx6azpgqdzhj0xl_x81TOJtt61lZQcokEymGUatYdXQIT_-d_BZCfw7L69axTPFSuup_E8SjAyp0nRkcqBGa3_qb9kAqzvxCyYCpGv8OzmhBVKSWmmmGhYIvAVbLfb3Go-usnjaRpzHoWPmsRk9y5aCDSUWZXzPgVvKCnkXzDOX-hYQ0SvBP6UAO6oBKT-Zaf1TxnqfE7W74RG7rx89K-r8O2tu6q6iXrAWN2IItCll3t4SbEhBeSYlqA4qVAM-_lxNug" nonce="4958d6bd4aeb1c4285c70ba4d7ef39c5" charset="UTF-8"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=_JJNWNl1_MPGD1imPsTZ-oOxkQ1uyA3lJ1emzxwaI4QgL-ntkV-vstDR7b9JzY7AQxJyQCpVd_6ymUwre6DcO3gjijELrAAQgKhAkge6KMsAcYErlDLQtwo0vP8DvjZ7120URo1Fb4feZ3tagg5pPvlUnPUSmShYiOZ2_eQR-EYzeB32B5UwzCMJ_2V-Yz5eY21s60y2-MUSZg6WjHJ1WcOUECrnUOOZAzvdUkuSLrODbcVcCxCstOaWqRft9i7yNu5oIekglXVuuq59LzoudR9kM9XcqhcbEiMg9t6blWevLz1mvhC2XX-52fmEkiRBa46L1yqLqDIAzp_udmMCDHYVZWdyLEsDPn920Y7csKstrVt1wPleaBGSNALxaZO2UaVMMYlJDlOQhoMQE6e9U8E-AtYXsE5v0qOrKBtjC_dlFBq8K_l0XSn_G7KTvhJCjvyH1aXiI1rnh6wbsYZn9LEHB2uFKXCQQcEUmYLUMoUBlwqApSIqS43Phf_C4rGbGzf1fC4A-StRvffgqZpsNFJOTd7mb4OM-FWCTDKvadZUHQXW4XM9cYFCCNUc0csjTOtj9UUF2TJ_1opnPruHwZHiFZtluaKxPzSByxGAaZYmwY4zlGEQbb4ZNwIhDYyHEMqRbU_rd3nqvBHL02Gyzx58Z8b3phH4j2Knq7JgTN2oR9kIyp_UVAvG6SF7wJw8ojMxVQJ-T8lkEwixoMyG0D3Jd-rYHvUeLzkfKIdfs5-eMVV7WWT79rNdwuDZdWVqf9zfuYtGNT5d2xMHtrYS0bc8B8Gr6eqYVrKNPh1cK7fTZo90s5DgFaMUECR0kL_fI_oFDJv4NY6zPOHaGOkUnMknIXREeXyaQ6ZaZnaICtKRK0KGR6ymWYM5snIzjaUEczEmmdpvwE9OaSBsVDW94M57woKDstnRr65fLMxKfiN3BSD11DCEd_SK9pCtU6HfAbc7B8UAIaOP2pCdyLCfW8L56xsw8jbcWvK1F9_SQObeuAy1tNZk9Uzd9gL4sqSJxWqRmnaARqgQHS0JlXlznwbkg-51fpzp5QY6Qh_gAHcFiz6LQP71N8GyuKRtB8zeJ1A7G9JqEr86vXX63LJeXbF9wX4R36Q5IwltFOazbwvgq4VyZ015k-o6_zDyuft_bxkaMVg2oPJpKC0jXsVgmfOCVpdJPKzDbdjqZfhX90rEx69ysd6McnChNeZQwCVF85JZea_PjTyyQWDVw-Dnbu9O9Kbuz4m1icwTuUn9bdk" nonce="c330038a7d2fcc21a076c7489275c694" charset="UTF-8"></script>
+
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vNCjbnmI52Jy9ksoAoOOE6sPp8EAjBqYVjpEPoJLPRzbOFW_tfSS_zznY_AIfqWJxEEd_6gqPkzafVMEsGl-LzOHRYBG7204BjLOHZ9eHlNJkk-gkohhpbuYwh-f1BXqojtYYw87srD4OQrVSBmTq4laP_xKrD6KL7GrvkyvrLciUXDHBfKivo3nlRcUisWBifZztxfCvf7fILrW_4lwdXpL5beUkzAjQf47sMdHuwVjSbX6V3Ko9RdpK3gd3HKOWeNJDXFKMvbtFZTY-d8Knhf0qdraExMlWQ4RhqIIOmrSjFnrAyhkbfC5Z1rlhii2yaTOHYd_H9mO6_kPKHGZI2BF2CKWD6nKYQjKzCoMmnpRzNAYspNWY1PQ6kOPfL-zKIqkH1OF2xnAAPjE5FhY3m6To-JW0_-FjGifHzX9jNfbfpa73hU0Ll1pa29XU6GrdAZ9RFrotBVsyvQAHvuodaPLBZSyRXSIqPq8FuSX8dZlB3Q1XkbgBpzMUOdct5uton59QpymhOqwvqBeC9bd8rKk58BFSXqBOAlbs6NFRlDJtM0-dAYhp2z7ZOtfzI14DfZPR89DHQkX8HHlWxyQhY7oJWRdUfV1il4az7LdE3Laj71424fGnklFnvwln-IsZYlUjVtEfQQ-y-E4YzpKSZNGyoczXZQvKwzeiQK4nYBKOOB7raXtxPurT4VlJFvegIMB4igMdbiT9IokNLAUbpdRj1BAEf_pPeidO9NYaLqZ8fsYGep-v9p_rTn8Eo649kzSeLb1EeRoOHV_OqoUBEvqC5lmPjey8a0mepF7bTWGLnEz6ho_ZuFoR3Q5IAk7o2vuwiyW6eQbrjK2nXn92LSwYzNQNaK1l3oGzpv34j4VNwUziHAhHnrzPF8lT9DMdXr73HaQ3yURjOEubsERIrjzSSfe9fdLClbwgR9FyP0NLmYuldcpcSPkoPjex-oMqBmpzRzHO6G45MoB7DeTqF6TugWcVPardXfUdic_kyBYUSyVK-xLgWZZo1PZQk2wuZSLhhhsAu8y4U095wXLk57N94UeyyehPghwHMLX63oENrGnN_fMfuCGagr2JxU6TmtA6FwnxpLm1srowN83b-ETAZY9xPKowMsS2Rwdwt05J8mJVqsSbYTE6rXVoRjzxp1QUykIDXqVRgrp2ECdY2xYacdAwQB1gE8qu1_4yvzEbHnPblXVfeeKMdnkaCi8ZpssrtCP7ckRgxA_mP4y_7nfdjdoPlQ6WpTsoQu4-bE" nonce="b32f18870170a8e6aa83f793f3f532de" charset="UTF-8"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=n1-sILP_UFXFUIyCkKhOsRfkRycMHLRBr13m3ohj2nGKA3FOXVNXEh26DV-1qwFeLcfjGa_ZJqQpRxZDSPyBlSPIvDIb9khCan5_-w3KYuPf29ngKkf3xq8pTpHUCGwqZtC9hE0uA_A-JAwBtezevZqKpVsPkn4BXkhb9oxK5l9oraxCpvxsoZG3C5Bsm21uxpeYW_YH3Qwq98y5_v7t5CJyNiOtdynzBlbhGwMH6UV3f8yMIqYOEswlaIxfTCUBbVS243ee-mfxoUw9vI-2cvbrXm-0NX8fxfD8MTr8HGE4pVNNQkbOYdQ0LTRFAZKCpNx4kPynB_--EEiyaoHrxmvr06EwFIHcfcIP1Q48zs7zsO4jjX-JU0-eFUtrtrLpbSXwShhjtIa0KIa2yBIPJ8tIXw15cl4jBf-CzFDlFETgtdqH5aFBJaAA3weIYelmxlDZAmhmxuS7UOOQ40aYi7D9NhD29X6XLYBTPtZvf6kPRTvOkZBAbYCn8EBgKbmarMPMFFlaZzscVxWp9W0s73evyEp0eUcXRlwci0bed0unWzsK4f2sDP3fDj2_vUiev98HhCOQZSSz4Kvg9AEGndkm4ms0OP_42Dx76L72XU1BdzbfJ6SLxBpIt7zNVNr8oOxTSPYGavg7a0gKwVivhY8Ozw2JVXVOI0w8HXCE3_4nx6ftUhCoQ5EbmzXF8QRcjlxqn90KU6UQ4JTIQ9S2PhdIEI4lalHWzGMxTUdAY1LmDuNpifryX9jmRyeXGPeVwmnZPdDPKLSzqkTyv_W4jAL0D8jsVfnLpB-My2vG6H2Yn4H7s82O4clvwrakmm-5Pok91oGf0eTGxjwAQa19Brx-kN_F0Xkw4Ewsl9OIwZSnHxg4M_cg7EhweIQ0FixJzBX2E-b3UYObBELieLMpCQ6QHSIVQmq2YCHLfRyeiyxSV7tYa6eb6hb8GPYE06ge_OmnHHwxT3-RbcefGdO89_389axIhbBIprogtVaRb-QOJ12IOOjVKrxgqHRioBaW7mQiA6vAS2OXir1LaI89bdgxfs6mqPwj-9vylsYFKkn7mae6h2Q-cDEIDB7a5u713BwBQXUhyvPZaIapP6lMTcEgKV9fsm5Z9YDIhqHMrDjX488tP2XNcMRqTetfoF-1hW0dB7AlbIKCqwtRef5IvlGAYhJfG-SMNLBermL8yQ_AFVYNURPC9GA0BI66kDkN3f7azuDdfWybvrGIGna4WOEZfwxsfgr4RXS_o6zswow" nonce="c5de27c70e4d9328fc9cfc0f3fe17b1d" charset="UTF-8"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=o0_QPLqsIrNuYO2l0y1BCEfYnGbdvrVnbBhLh5Ytb4nnB1i-5sTq0-ctPKkwxqHI0xgtRF3S0usUmYhD2CDVAqqI4TJpN7FJ0SS-LBiVC1JW9L1KAQ-mfas3zd_IE7Gq6AlGSEyqTkbWe7MRKR36xAQX50J31PHNkUyTynGRqrgb3z3w1GQc_tsZhWplxEn_lZgC60IHEkCdnAu15S94QGxkx2tlrvTxhv6aScjjTqY-aQIW0DweSzYyDZabTC-rSsXoqqYJD2850yySj5VmQu_V3YrpBOjqwhFcRxGhkTVYTc6RhdGiahqDAZlLTOYxAyNoWnzt5XBKxZNm3cPEliB7vcxENwp8E-9ki7M-6God0J9E5YAx6bNsLkTR2L3E2O7mKP2QjIMio9_qgG_lwOawtnwfdxZy_S1_-6_6k7dy3S5xTp9rmvHPjxdCrwKshWLyusxmNJBwhL-Xz2m8Cfg25kdND_eZoa6fC159a0dByJwqVSuQx7zkGsrRffbn4LZN-pLm6_dAx2AVrZc_-evoFwWvBK4ZwPdsobiACau3Mu0FF1J6JJYYLrfDq6xPKgx7fNkKN1Qyd6x-42H2W94JsmM7d0QDlIigWTutdLBZVwx5LM5BdH4OlrbMk-rdiwZ3EwPZmFYV1jgYK3gs24exeF00UIvXhi_UfP1mwPiWxwyoS-per4l_ViEaLw2G1_wtgdvpQSpkyefmcHza9HbYRJ1X9DNpiE7_HbIsS1LSlPHS2EESFuDEWHIa-NBLD6paBkcTQq-m0ak0KvBMNhXgIQSIodo-VZ3vbKJn6rRlHjFbxVHLwCZRQYm7Ig6i71_y40PRcXBprXogx92ka13HOA_zwYfy4xpcX5_rbgSKSbA60a7a3ZGLq680Tn7DrAlW-Rv1LCfeMO8rrRWuWx8FBoWwtfbW28GO76bLR31R_5xsq1HlxKNzcgM8RcgK6hhd3B1x6MgbdG03A-RAsNXdDHiOfjgeZe0e08mJhqVRwCkfTWd4za-Yjz4aXC3H2wWHHQifxQvASLH4KuDHyENPpAtSU6ggKNvo51S80A1q5xW9TO2-qObE9tsJ4q_9jk0FejSjM6irDhzOupHcbS3d6_pE0s0cdswvQjghixI8rha7ICHqbf5OvXw4WAVd619oHQ_GZMLLptR38elGRsFanM27bJnOHbOcINTjkQgFpmzgkqF_rTul6WJF97hnnU89djtuhcH9jZ8VWuIO9_DQ9UgrNif3-f5aU1e9Bw4" nonce="1c71d624533b022b8a1a58678a9ed9b5" charset="UTF-8"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <style>
+
+        body, input, h6, html {
+            color: rgb(49 109 165);
+        }
+
+        h4 {
+            color: white;
+        }
+
+        .card {
+            border: rgb(233 237 239 / 53%);
+            padding: 0px;
+            margin-top: 100px;
+            // background-color:rgb(70 162 227);
+        }
+
+        .card-header {
+            background-color: rgb(34 89 137);
+        }
+        .card-body {
+            padding:2em 2em;
+        }
+
+        .form-control-plaintext {
+            color: rgb(49 109 165);
+        }
+
+        .form-control {
+            border: 1px solid rgb(159 193 226 / 61%);
+            color: rgb(49 109 165);
+        }
+
+        #datatable {
+            border: 1px solid rgb(223 237 251);
+            min-height: 330px;
+            /* height:100%;*/
+            max-height: 330px;
+            list-style-type: none;
+            overflow: auto;
+            display: inline-block;
+            /* padding: 15px 10px 15px 10px; */
+            margin-bottom: 0px;
+        }
+
+        .cell-border {
+            border: 1px solid rgb(223 237 251);
+        }
+
+        #dataTables_filter label input, #dataTables_length {
+            display: inline-block;
+            margin: 1em;
+        }
+
+        #datatable_info {
+            font-size: 0.8em;
+        }
+
+        #page, #page_numbers {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            color: rgb(76 150 218);
+            margin: 1px;
+            padding: 1px;
+        }
+
+            li:hover {
+                color: rgb(49 109 165);
+            }
+
+        #select_type, #errorDiv, #month_select, #day_select, #to_div, ul {
+            margin-top: 14px;
+        }
+
+        #list_count {
+            margin-top: 20px;
+            color: rgb(49 109 165);
+        }
+
+
+        #output {
+            /*margin-bottom:10px;*/
+        }
+
+        #page_numbers, #page-item {
+            height: 2px;
+        }
+
+        #page_numbers {
+            overflow: scroll;
+        }
+
+        .form-control-sm > button {
+            /* border: 1px solid rgb(223 237 251 / 61%);  */
+            border: none;
+            color: rgb(49 109 165);
+            margin: 0px;
+            padding: 0px;
+            background-color: white;
+        }
+
+        #datatable_filter {
+            display: none;
+        }
+
+        #datatable_length {
+            display: none;
+        }
+
+        #dataTables_filter input .form-control {
+            font-size: 7em;
+        }
+
+        .focus {
+            border-color: rgb(157 196 237 / 60% );
+            box-shadow: 0 0 4px rgb(157 196 237 / 50% );
+        }
+
+        .tooltip-inner {
+            font-size: 11px;
+            background-color: rgb(34 89 137);
+        }
+
+        select.minimal {
+            background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+            background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+            background-size: 5px 5px, 5px 5px, 1px 1.5em;
+            background-repeat: no-repeat;
+        }
+
+        #resultgrid {
+            height: 200px;
+        }
+
+        .even {
+            background-color: rgb(157 196 237 / 8% );
+            border-radius: 2px;
+        }
+
+        th, .modal-header {
+            background-color: rgb(34 89 137);
+            color: white;
+        }
+
+        td {
+            border: 2px solid rgb(157 196 237 / 8% );
+            border-radius: 2px;
+        }
+
+        tbody tr :hover {
+            background-color: rgb(157 196 237 / 10% );
+        }
+
+        .paginate_button, #datatable_info {
+            color: rgb(49 109 165);
+            margin: 1px 2px 1px 0px;
+            padding: 2px;
+            font-size: 1em;
+        }
+
+        #datatable_filter label input {
+            margin: 2px;
+            padding: 10px;
+        }
+
+        tbody tr td {
+            padding-left: 4px;
+        }
+
+        .modal-body, .modal-footer {
+            padding: 20px 30px;
+        }
+
+        .btn-sm {
+            padding: 2px;
+        }
+
+        .btn {
+            color: white;
+        }
+
+        button :hover {
+            color: white;
+        }
+
+        .modal-body, .modal-footer {
+            border: none;
+        }
+
+        .modal ##extnCancel, .modal .btn-success {
+            padding: 4px;
+        }
+
+        #extnCancel, #extnCancel :hover {
+            background-color: rgb(194 205 216);
+            border-radius: 4px;
+            padding: 6px;
+            color: white;
+        }
+
+        #extnSubmit {
+            border-radius: 4px;
+            padding: 6px;
+        }
+
+        fa {
+            color: rgb(194 205 216);
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#day_select").hide();
+            $('#month_select').hide();
+            $('[data-bs-toggle="tooltip"]').tooltip();
+            $('#datatable').DataTable();
+
+            jqgrid();
+
+            $('#datatable_filter label').addClass("form-control-label");
+            $('#dataTables_filter').addClass("form-control");
+            $("#dataTables_filter label input").addClass("form-control");
+        });
+
+        function jqgrid(remind_dates) {
+            $("#datatable").DataTable().destroy();
+            var array = [];
+            if ($("#from_date").val() != '' && $("#to_date").val()!='') {
+                array = generateData(remind_dates);
+            }
+
+            function generateData(dts) {
+                var ar = [];
+                for (i = 0; i < dts.length; i++) {
+                    var row = {};
+                    row["remDate"] = dts[i];
+                    ar[i] = row;
+                }
+                return ar;
+            }
+
+            $("#datatable").DataTable({
+                //	data: generateData(rem_dates),
+                "ordering": false,
+                data: array,
+                columns: [
+                    { data: "remDate" }
+                ]
+            });
+
+        }
+
+        function ExtnSubmit() {
+            var update_num = $('#update_number').val();
+            $('#ExtnModal').modal('hide');
+            var date_type = $("#select_type option:selected").val();
+            var updated_dates = rem_dates;
+            var remind_dates = [];
+            for (i = 0; i < rem_dates.length; i++) {
+                updated_dates[i] = new Date(updated_dates[i].setDate(updated_dates[i].getDate() + parseInt(update_num)));
+            }
+
+            for (i = 0; i < updated_dates.length; i++) {
+                if (date_type == "daily") {
+                    remind_dates.push(updated_dates[i].toLocaleString('default', { weekday: 'long' }) + " " + padTo2Digits(updated_dates[i].getDate()) + "-" + padTo2Digits((updated_dates[i].getMonth() + 1)) + "-" + updated_dates[i].getFullYear());
+                }
+                else {
+                    remind_dates.push([padTo2Digits(updated_dates[i].getDate()), (padTo2Digits(updated_dates[i].getMonth() + 1)), updated_dates[i].getFullYear()].join('-'));
+                }
+            }
+            jqgrid(remind_dates);
+            $('#update_number').val() = '';
+        }
+
+        function clearList() {
+            $("#errorDiv").empty();
+            $("#day_select").empty();
+            $('#month_select').empty();
+            $("#day_select").hide();
+            $('#month_select').hide();
+            $('#list_count').empty();
+            // $('#page_numbers').empty();
+        }
+
+        function validate() {
+            $('p').css("color", "rgb(76 150 218)");
+            $("#from_date").removeClass("focus");
+            $("#to_date").removeClass("focus");
+
+            if ($("#from_date").val() == '') {
+                $('#errorDiv').append('<p> From date Cannot be Blank </p> <br>');
+                $('p').css("color", "red");
+                $("#from_date").addClass("focus");
+                return false;
+            }
+            if ($("#to_date").val() == '' && $("#select_type option:selected").val()!= 'select') {
+                $('#errorDiv').append('<p> To date Cannot be Blank </p> <br>');
+                $('p').css("color", "red");
+                $("#to_date").addClass("focus");
+                return false;
+            }
+            if (($("#to_date").val() < $("#from_date").val()) && $("#select_type option:selected").val() != 'select') {
+                $('#errorDiv').append('<p> To date Cannot be smaller than from date </p> <br>');
+                $('p').css("color", "red");
+                return false;
+            }
+            return true;
+        }
+
+        function dateChange() {
+            if ($("#from_date").val() != '') {
+                $("#from_date").removeClass("focus");
+            }
+            if ($("#to_date").val() != '') {
+                $("#to_date").removeClass("focus");
+            }
+            //clearList();
+            //$('#select_type').val('select');
+
+            $("#errorDiv").empty();
+            $('#list_count').empty();
+            $('#page_numbers').empty();
+            rem_dates = [];
+            selectchange();
+        }
+
+        function day_change() {
+            $("#errorDiv").empty();
+            $('#list_count').empty();
+            $('#page_numbers').empty();
+            rem_dates = [];
+
+            selectchange();
+        }
+
+        function month_change() {
+            $("#errorDiv").empty();
+            $("#day_select").empty();
+            $('#list_count').empty();
+            $('#page_numbers').empty();
+            rem_dates = [];
+            selectchange();
+        }
+
+        function datetype_select() {
+            clearList();
+            rem_dates = [];
+            selectchange();
+        }
+        function change() {
+            if (validate()) {
+
+                var from_date = $("#from_date").val();
+                var to_date = $("#to_date").val();
+                rem_dates = [];
+                $('#page_numbers').empty();
+                var startDate = new Date(from_date);
+                var endDate = new Date(to_date);
+                var date = new Date(from_date);
+                var dates = [];
+                while (date <= endDate) {
+                    dates.push(new Date(date));
+                    date.setDate(date.getDate() + 1);
+                }
+
+                dates.forEach(display);
+
+            }
+        }
+        var rem_dates = [];
+        var remind_dates = [];
+
+
+        function padTo2Digits(num) {
+            return num.toString().padStart(2, '0');
+        }
+        function padDayLength(str) {
+            return str.padEnd(9, ' ');
+        }
+
+
+        function display(item, index, dates) {
+
+            var date_type = $("#select_type option:selected").val();
+            var fromdate = new Date($("#from_date").val());
+            var item_p = dates[0];
+            if (index > 0) item_p = dates[index - 1];
+
+            const date = item.getDate();
+            const month = item.getMonth();
+            const year = item.getFullYear();
+
+            if (date_type == "daily") {
+
+                rem_dates.push(item);
+            }
+
+            if (date_type == "weekly") {
+                var remind_day = $("#day_select option:selected").val();
+                
+                if (remind_day == item.toLocaleString('default', { weekday: 'long' })) {
+                    rem_dates.push(item);
+                }
+            }
+
+            if (date_type == "monthly") {
+                var remind_day = $("#day_select option:selected").val();
+                
+                if (remind_day == item.getDate()) {
+                    rem_dates.push(item);
+                }
+
+                else if ((item.getDate() < item_p.getDate()) && (remind_day == 29 || remind_day == 30 || remind_day == 31)) {
+                    let ele = rem_dates.filter((x) => { return x.getMonth() == item_p.getMonth(); });
+                    if (!((item.getMonth() == fromdate.getMonth()) && (item.getDate() < fromdate.getDate()))) {
+                        if (ele.length == 0) {
+                            rem_dates.push(item_p);
+                        }
+                    }
+                }
+            }
+            if (date_type == "yearly") {
+                var remind_month = "";
+                $("#month_select option:selected").each(function () {
+                    remind_month = $(this).val();
+                });
+                if (remind_month == item.toLocaleString('default', { month: 'long' })) {
+                    var remind_day = "";
+                    $("#day_select option:selected").each(function () {
+                        remind_day = $(this).val();
+                    });
+
+                    if (remind_day == item.getDate()) {
+                        rem_dates.push(item);
+                    }
+                    else if ((item.getDate() < item_p.getDate()) && (remind_day == 29 || remind_day == 30 || remind_day == 31)) {
+                        let ele = rem_dates.filter((x) => { return x.getMonth() == item_p.getMonth(); });
+                        if (!((item.getMonth() == fromdate.getMonth()) && (item.getDate() < fromdate.getDate()))) {
+                            if (ele.length == 0) {
+                                rem_dates.push(item_p);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+
+            if ((index == dates.length - 1)) {
+
+                var page_c = 0;
+
+
+                $('#list_count').append("Number of Reminders :  " + rem_dates.length);
+                remind_dates = [];
+
+                for (i = 0; i < rem_dates.length; i++) {
+                    if (date_type == "daily") {
+
+                        let d = rem_dates[i].toLocaleString('default', { weekday: 'long' });
+
+                        remind_dates.push(padDayLength(d) + " " + padTo2Digits(rem_dates[i].getDate()) + "-" + padTo2Digits((rem_dates[i].getMonth() + 1)) + "-" + rem_dates[i].getFullYear());
+                    }
+                    else {
+
+                        remind_dates.push([padTo2Digits(rem_dates[i].getDate()), (padTo2Digits(rem_dates[i].getMonth() + 1)), rem_dates[i].getFullYear()].join('-'));
+
+                    }
+                }
+
+                jqgrid(remind_dates);
+
+                if (date_type == "daily") {
+                    $('#datatable').removeClass("text-center");
+                    $('#datatable').addClass("text-left");
+                }
+                else {
+                    $('#datatable').removeClass("text-left");
+                    $('#datatable').addClass("text-center");
+                }
+
+            }
+            return rem_dates;
+        }
+
+        //function pageChange() {
+
+        //    paginate(rem_dates,);
+
+        //    function paginate(array, page_size, page_number) {
+        //        // human-readable page numbers usually start with 1, so we reduce 1 in the first argument
+        //        return array.slice((page_number - 1) * page_size, page_number * page_size);
+        //    }
+        //}
+
+        function selectchange() {
+
+
+            if (validate()) {
+
+                var from_date = $("#from_date").val();
+                var to_date = $("#to_date").val();
+
+                var date_type = $("#select_type option:selected").val();
+
+                var startDate = new Date(from_date);
+                var endDate = new Date(to_date);
+                var date = new Date(from_date);
+                var dates = [];
+                rem_dates = [];
+                if (date_type != 'select') {
+                    getDatesInRange();
+
+                    dates.forEach(display);
+                }
+                function createNewSelect() {
+
+                    while (date <= endDate) {
+                        dates.push(new Date(date));
+                        date.setDate(date.getDate() + 1);
+                    }
+
+                    if (date_type == "yearly") {
+                        $("#day_select").empty();
+                        if (document.getElementById("month_select").value == '') {
+                            $("#month_select").empty();
+                            var select_node = document.createElement('option');
+                            select_node.setAttribute("value", "select");
+                            var text1 = document.createTextNode("Select Month");
+                            select_node.appendChild(text1);
+                            $("#month_select").append(select_node);
+
+                            const months = [];
+                            const date_start = new Date(from_date);
+                            const date_end = new Date(to_date);
+                            const cur_date = new Date(from_date);
+                            var month = "";
+                            while (cur_date.getFullYear() <= date_end.getFullYear()) {
+
+                                if (cur_date.getMonth() + 1 == 1) {
+                                    const ar = [29, 30, 31];
+                                    let flag1 = false;
+                                    flag1 = ar.filter((x) => { if (x == cur_date.getDate()) return true; });
+
+                                    if (flag1)
+                                        cur_date.setDate(28);
+                                }
+
+
+                                if (cur_date.getMonth() <= endDate.getMonth()) {
+                                    month = cur_date.toLocaleString('default', { month: 'long' });
+                                    cur_date.setMonth(cur_date.getMonth() + 1);
+                                }
+                                else if (cur_date.getMonth() > endDate.getMonth()) {
+                                    if (cur_date.getFullYear() <= endDate.getFullYear()) {
+                                        if (cur_date.getFullYear() == endDate.getFullYear()) {
+                                            break;
+                                        }
+                                        else {
+                                            month = cur_date.toLocaleString('default', { month: 'long' });
+                                            cur_date.setMonth(cur_date.getMonth() + 1);
+                                        }
+                                    }
+                                    else {
+                                        break;
+                                    }
+                                }
+                                else {
+                                    cur_date.setMonth(cur_date.getMonth() + 1);
+                                }
+                                var el = months.find(function (i, z) {
+                                    if (month == i) return month;
+
+                                });
+
+                                if (el != month) {
+                                    months.push(month);
+                                }
+                            }
+
+                            months.forEach(function (item, index) {
+                                const option = document.createElement('option');
+                                option.setAttribute("value", item);
+                                const text = document.createTextNode(item);
+                                option.appendChild(text);
+                                $("#month_select").append(option);
+
+                            });
+                        }
+                        var tag = true;
+                    }
+
+                    if (date_type == "weekly" || date_type == "monthly" || tag) {
+                        $("#day_select").empty();
+                        var select_node = document.createElement('option');
+                        select_node.setAttribute("value", "select");
+                        var text1 = document.createTextNode("Select Day");
+                        select_node.appendChild(text1);
+                        $("#day_select").append(select_node);
+
+                        var days = [];
+                        dates.forEach(function (item, index) {
+                            var day = "";
+                            if (date_type == "weekly") {
+                                day = item.toLocaleString('default', { weekday: 'long' });
+                            }
+                            else if (date_type == "monthly" || tag) {
+
+                                if (tag) {
+                                    var rem_month = $("#month_select option:selected").val();
+                                    if (item.toLocaleString('default', { month: 'long' }) == rem_month) {
+                                        day = item.getDate();
+                                    }
+                                }
+                                else
+                                    day = item.getDate();
+                            }
+                            var el = days.find(function (i, z) {
+                                if (day == i) return day;
+
+                            });
+
+                            if ((el != day) && (day != "")) {
+                                days.push(day);
+                            }
+                        });
+
+                        days.forEach(function (item, index) {
+                            const option = document.createElement('option');
+                            option.setAttribute("value", item);
+                            const text = document.createTextNode(item);
+                            option.appendChild(text);
+                            $("#day_select").append(option);
+                        });
+                        tag = false;
+                    }
+                }
+
+                function getDatesInRange() {
+
+                    if (date_type == "daily") {
+                        $('#day_select').hide();
+                        $('#month_select').hide();
+                        createNewSelect();
+                    }
+
+                    if (date_type == "weekly") {
+                        $("#day_select").show();
+                        $('#month_select').hide();
+                        if (document.getElementById("day_select").value == '') {
+                            $("#day_select").empty();
+                            createNewSelect();
+                        }
+                        else
+                            change();
+                    }
+
+                    if (date_type == "monthly") {
+                        $('#day_select').show();
+                        $('#month_select').hide();
+                        if (document.getElementById("day_select").value == '') {
+                            $("#day_select").empty();
+                            createNewSelect();
+                        }
+                        else
+                            change();
+                    }
+
+                    if (date_type == "yearly") {
+                        $('#month_select').show();
+                        $('#day_select').show();
+                        if (document.getElementById("month_select").value == '') {
+                            $("#month_select").empty();
+                            createNewSelect();
+                        }
+                        else if (document.getElementById("day_select").value == '') {
+                            $("#day_select").empty();
+                            createNewSelect();
+                        }
+                        else
+                            change();
+                    }
+                }
+
+            }
+        }
+    </script>
+
+
+
+    <div class="container-fluid ">
+        <div class="row col-md-6 offset-md-3 d-flex align-items-center ">
+            <div class="card shadow-sm rounded">
+                <div class="card-header text-center">
+                    <h4>Reminder</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div id="inpt" class=" col-sm-8">
+                            <div class="col-sm-12 d-flex align-items-center">
+                                <label class="col-sm-5 form-control-label">From Date</label>
+                                <input class=" text-center form-control" type="date" id="from_date" onchange="dateChange()">
+                            </div>
+                            <div id="to_div" class="col-sm-12 d-flex align-items-center">
+
+                                <label class=" col-sm-5 text-left form-control-label">To Date</label>
+
+                                <input class=" text-center form-control" type="date" id="to_date" onchange="dateChange()">
+                            </div>
+                            <div class="col-sm-12 ">
+                                <select id="select_type" class="text-center form-control minimal " data-bs-toggle="tooltip" data-container="body" title="Select Reminder Interval" onchange="datetype_select()">
+                                    <option value="select" selected>Select Interval</option>
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="yearly">Yearly</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 text-center " id="addDiv">
+                                <select id="month_select" class="text-center form-control minimal" data-bs-toggle="tooltip" title="Select Month" onchange="month_change()"></select>
+                                <select id="day_select" class="text-center form-control minimal" data-bs-toggle="tooltip"
+                                        title="Select Day" onchange="day_change()"></select>
+                            </div>
+                            <div class="col-sm-12 text-center " id="note">
+                                <p id="list_count" class="col-sm-12 text-center form-control-plaintext ">
+                                </p>
+                                <div class="col-sm-12 text-center " id="errorDiv">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="output" class="col-sm-4">
+                            <!--<label class="col-sm-12 text-center "><b>Reminder Dates</b></label>
+
+                             <ul id="datelist" class=" form-control" data-bs-toggle="tooltip" title="Reminder Dates">
+                             </ul>
+                             <div id="page" class="col-sm-12">
+                                 <ul id="page_numbers" class="pagination">
+                                 </ul>
+                             </div>-->
+
+                            <div id="resulttable" class="col-sm-12 ">
+                                <table id="datatable" class="display nowrap cell-border" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">Reminder Dates <button id="extension" class="text-end offset-sm-1 btn btn-sm" data-bs-toggle="modal" data-bs-target="#ExtnModal"><i data-bs-toggle="tooltip" title="Update Reminder Dates" class="fa fa-plus-circle" aria-hidden="true"></i></th>
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="ExtnModal" class="modal " tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered ">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title col-sm-11 text-center">UPDATE</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="ExtnInput" class="col-sm-12 d-flex align-items-center">
+                                            <label class="col-sm-5 text-left form-control-label">Number to Update </label>
+                                            <input type="number" class=" form-control" id="update_number" data-bs-toggle="tooltip" title="Input Number to Update Dates">
+
+                                        </div>
+                                        <small class="offset-sm-5"><i class="fa fa-info-circle" aria-hidden="true"></i> use '-' to decriment dates [ eg : -2] </small>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" id="extnCancel" class="btn btn-sm " data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" id="extnSubmit" class="btn btn-success btn-sm" onclick="ExtnSubmit()">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
